@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/Icons"/>
+    <qresource prefix="/incones">
+        <file>recursos/cutbox.png</file>
+        <file>recursos/cutelipsoide.png</file>
+        <file>recursos/cutsphera.png</file>
+        <file>recursos/cutvoxel.png</file>
+        <file>recursos/putbox.png</file>
+        <file>recursos/putelipsoid.png</file>
+        <file>recursos/putsphera.png</file>
+        <file>recursos/putvoxel.png</file>
+    </qresource>
+</RCC>

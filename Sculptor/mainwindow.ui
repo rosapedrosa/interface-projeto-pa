@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>834</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="Interface" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>481</width>
+      <height>331</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>606</x>
+      <y>10</y>
+      <width>155</width>
+      <height>425</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="groupBox_Esfera">
+       <property name="title">
+        <string>Esfera</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QLabel" name="labelRaio">
+           <property name="text">
+            <string>Raio</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="horizontalSliderSphere">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelRaio_1">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="groupBox_Posicao">
+       <property name="title">
+        <string>Posições</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QSplitter" name="splitter_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QLabel" name="label_x">
+           <property name="text">
+            <string>x</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="horizontalSlider_x">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelX_1">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_xy">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>28</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QLabel" name="label_y">
+           <property name="text">
+            <string>y</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="horizontalSlider_y">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelY_1">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_yz">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>28</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QLabel" name="label_z">
+           <property name="text">
+            <string>z</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="horizontalSlider_z">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelZ_1">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QGroupBox" name="groupBox_Posicao_2">
+       <property name="title">
+        <string>Sphera</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QSplitter" name="splitter_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QLabel" name="label_Rx">
+           <property name="text">
+            <string>Rx</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="horizontalSlider_Rx">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelRx_2">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Rxy">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>28</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QLabel" name="label_Ry">
+           <property name="text">
+            <string>Ry</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="horizontalSlider_Ry">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelRy_2">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Ryz">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>28</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QWidget" name="">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_Rz">
+              <property name="text">
+               <string>Rz</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="horizontalSlider_Rz">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelRz_2">
+              <property name="text">
+               <string>1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>350</y>
+      <width>136</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_valueX">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="lcdNumber_valueY">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>false</bool>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>834</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArquivo">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuArquivo"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+   <addaction name="actionputvoxel"/>
+   <addaction name="separator"/>
+   <addaction name="actioncutvoxel"/>
+   <addaction name="separator"/>
+   <addaction name="actionputbox"/>
+   <addaction name="separator"/>
+   <addaction name="actioncutbox"/>
+   <addaction name="separator"/>
+   <addaction name="actionputshera"/>
+   <addaction name="separator"/>
+   <addaction name="actioncutsphera"/>
+   <addaction name="separator"/>
+   <addaction name="actionputellipsoid"/>
+   <addaction name="separator"/>
+   <addaction name="actioncutellipsoid"/>
+  </widget>
+  <action name="actionNew">
+   <property name="text">
+    <string>New Draw</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Put&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionputvoxel">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/incones/recursos/putvoxel.png</normaloff>:/incones/recursos/putvoxel.png</iconset>
+   </property>
+   <property name="text">
+    <string>putvoxel</string>
+   </property>
+   <property name="toolTip">
+    <string>putvoxel</string>
+   </property>
+  </action>
+  <action name="actionputbox">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/incones/recursos/putbox.png</normaloff>:/incones/recursos/putbox.png</iconset>
+   </property>
+   <property name="text">
+    <string>putbox</string>
+   </property>
+   <property name="toolTip">
+    <string>putbox</string>
+   </property>
+  </action>
+  <action name="actioncutvoxel">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/incones/recursos/cutvoxel.png</normaloff>:/incones/recursos/cutvoxel.png</iconset>
+   </property>
+   <property name="text">
+    <string>cutvoxel</string>
+   </property>
+   <property name="toolTip">
+    <string>cutvoxel</string>
+   </property>
+  </action>
+  <action name="actioncutbox">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/incones/recursos/cutbox.png</normaloff>:/incones/recursos/cutbox.png</iconset>
+   </property>
+   <property name="text">
+    <string>cutbox</string>
+   </property>
+   <property name="toolTip">
+    <string>cutbox</string>
+   </property>
+  </action>
+  <action name="actionputshera">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/incones/recursos/putsphera.png</normaloff>:/incones/recursos/putsphera.png</iconset>
+   </property>
+   <property name="text">
+    <string>putsphera</string>
+   </property>
+   <property name="toolTip">
+    <string>putsphera</string>
+   </property>
+  </action>
+  <action name="actioncutsphera">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/incones/recursos/cutsphera.png</normaloff>:/incones/recursos/cutsphera.png</iconset>
+   </property>
+   <property name="text">
+    <string>cutsphera</string>
+   </property>
+   <property name="toolTip">
+    <string>cutsphera</string>
+   </property>
+  </action>
+  <action name="actionputellipsoid">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/incones/recursos/putelipsoid.png</normaloff>:/incones/recursos/putelipsoid.png</iconset>
+   </property>
+   <property name="text">
+    <string>putellipsoid</string>
+   </property>
+   <property name="toolTip">
+    <string>putellipsoid</string>
+   </property>
+  </action>
+  <action name="actioncutellipsoid">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/incones/recursos/cutelipsoide.png</normaloff>:/incones/recursos/cutelipsoide.png</iconset>
+   </property>
+   <property name="text">
+    <string>cutsellipsoid</string>
+   </property>
+   <property name="toolTip">
+    <string>cutellipsoid</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Interface</class>
+   <extends>QWidget</extends>
+   <header location="global">interface.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>horizontalSliderSphere</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>labelRaio_1</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>632</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>696</x>
+     <y>127</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_x</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>labelX_1</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>607</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>681</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_y</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>labelY_1</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>605</x>
+     <y>263</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>679</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_z</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>labelZ_1</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>600</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>679</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
