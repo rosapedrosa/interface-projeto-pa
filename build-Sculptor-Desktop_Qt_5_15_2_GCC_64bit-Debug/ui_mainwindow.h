@@ -46,7 +46,7 @@ public:
     QAction *actioncutellipsoid;
     QWidget *centralwidget;
     Interface *widget;
-    QWidget *widget1;
+    QWidget *layoutWidget;
     QFormLayout *formLayout;
     QGroupBox *groupBox_Esfera;
     QVBoxLayout *verticalLayout_2;
@@ -83,12 +83,12 @@ public:
     QLabel *labelRy_2;
     QSpacerItem *verticalSpacer_Ryz;
     QSplitter *splitter_7;
-    QWidget *widget2;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_Rz;
     QSlider *horizontalSlider_Rz;
     QLabel *labelRz_2;
-    QWidget *widget3;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout;
     QLCDNumber *lcdNumber_valueX;
     QLCDNumber *lcdNumber_valueY;
@@ -152,13 +152,13 @@ public:
         widget = new Interface(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(40, 10, 481, 331));
-        widget1 = new QWidget(centralwidget);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(606, 10, 155, 425));
-        formLayout = new QFormLayout(widget1);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(606, 10, 155, 425));
+        formLayout = new QFormLayout(layoutWidget);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setContentsMargins(0, 0, 0, 0);
-        groupBox_Esfera = new QGroupBox(widget1);
+        groupBox_Esfera = new QGroupBox(layoutWidget);
         groupBox_Esfera->setObjectName(QString::fromUtf8("groupBox_Esfera"));
         verticalLayout_2 = new QVBoxLayout(groupBox_Esfera);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -181,7 +181,7 @@ public:
 
         formLayout->setWidget(0, QFormLayout::LabelRole, groupBox_Esfera);
 
-        groupBox_Posicao = new QGroupBox(widget1);
+        groupBox_Posicao = new QGroupBox(layoutWidget);
         groupBox_Posicao->setObjectName(QString::fromUtf8("groupBox_Posicao"));
         verticalLayout = new QVBoxLayout(groupBox_Posicao);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
@@ -244,7 +244,7 @@ public:
 
         formLayout->setWidget(1, QFormLayout::LabelRole, groupBox_Posicao);
 
-        groupBox_Posicao_2 = new QGroupBox(widget1);
+        groupBox_Posicao_2 = new QGroupBox(layoutWidget);
         groupBox_Posicao_2->setObjectName(QString::fromUtf8("groupBox_Posicao_2"));
         verticalLayout_3 = new QVBoxLayout(groupBox_Posicao_2);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
@@ -291,41 +291,41 @@ public:
         splitter_7 = new QSplitter(groupBox_Posicao_2);
         splitter_7->setObjectName(QString::fromUtf8("splitter_7"));
         splitter_7->setOrientation(Qt::Horizontal);
-        widget2 = new QWidget(splitter_7);
-        widget2->setObjectName(QString::fromUtf8("widget2"));
-        horizontalLayout_2 = new QHBoxLayout(widget2);
+        layoutWidget1 = new QWidget(splitter_7);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_Rz = new QLabel(widget2);
+        label_Rz = new QLabel(layoutWidget1);
         label_Rz->setObjectName(QString::fromUtf8("label_Rz"));
 
         horizontalLayout_2->addWidget(label_Rz);
 
-        horizontalSlider_Rz = new QSlider(widget2);
+        horizontalSlider_Rz = new QSlider(layoutWidget1);
         horizontalSlider_Rz->setObjectName(QString::fromUtf8("horizontalSlider_Rz"));
         horizontalSlider_Rz->setOrientation(Qt::Horizontal);
 
         horizontalLayout_2->addWidget(horizontalSlider_Rz);
 
-        labelRz_2 = new QLabel(widget2);
+        labelRz_2 = new QLabel(layoutWidget1);
         labelRz_2->setObjectName(QString::fromUtf8("labelRz_2"));
 
         horizontalLayout_2->addWidget(labelRz_2);
 
-        splitter_7->addWidget(widget2);
+        splitter_7->addWidget(layoutWidget1);
 
         verticalLayout_3->addWidget(splitter_7);
 
 
         formLayout->setWidget(2, QFormLayout::LabelRole, groupBox_Posicao_2);
 
-        widget3 = new QWidget(centralwidget);
-        widget3->setObjectName(QString::fromUtf8("widget3"));
-        widget3->setGeometry(QRect(390, 350, 136, 25));
-        horizontalLayout = new QHBoxLayout(widget3);
+        layoutWidget2 = new QWidget(centralwidget);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(390, 350, 136, 25));
+        horizontalLayout = new QHBoxLayout(layoutWidget2);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        lcdNumber_valueX = new QLCDNumber(widget3);
+        lcdNumber_valueX = new QLCDNumber(layoutWidget2);
         lcdNumber_valueX->setObjectName(QString::fromUtf8("lcdNumber_valueX"));
         lcdNumber_valueX->setFocusPolicy(Qt::NoFocus);
         lcdNumber_valueX->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -334,7 +334,7 @@ public:
 
         horizontalLayout->addWidget(lcdNumber_valueX);
 
-        lcdNumber_valueY = new QLCDNumber(widget3);
+        lcdNumber_valueY = new QLCDNumber(layoutWidget2);
         lcdNumber_valueY->setObjectName(QString::fromUtf8("lcdNumber_valueY"));
         lcdNumber_valueY->setFocusPolicy(Qt::NoFocus);
         lcdNumber_valueY->setContextMenuPolicy(Qt::NoContextMenu);
@@ -442,7 +442,7 @@ public:
         labelY_1->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
         label_z->setText(QCoreApplication::translate("MainWindow", "z", nullptr));
         labelZ_1->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
-        groupBox_Posicao_2->setTitle(QCoreApplication::translate("MainWindow", "Sphera", nullptr));
+        groupBox_Posicao_2->setTitle(QCoreApplication::translate("MainWindow", "Ellipsoid", nullptr));
         label_Rx->setText(QCoreApplication::translate("MainWindow", "Rx", nullptr));
         labelRx_2->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
         label_Ry->setText(QCoreApplication::translate("MainWindow", "Ry", nullptr));

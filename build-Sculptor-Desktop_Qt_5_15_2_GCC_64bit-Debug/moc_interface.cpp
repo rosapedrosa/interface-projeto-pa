@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Interface_t {
-    QByteArrayData data[5];
-    char stringdata0[44];
+    QByteArrayData data[25];
+    char stringdata0[185];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,11 +36,35 @@ QT_MOC_LITERAL(0, 0, 9), // "Interface"
 QT_MOC_LITERAL(1, 10, 8), // "value_xy"
 QT_MOC_LITERAL(2, 19, 0), // ""
 QT_MOC_LITERAL(3, 20, 11), // "setPutVoxel"
-QT_MOC_LITERAL(4, 32, 11) // "setCutVoxel"
+QT_MOC_LITERAL(4, 32, 11), // "setCutVoxel"
+QT_MOC_LITERAL(5, 44, 9), // "setPutBox"
+QT_MOC_LITERAL(6, 54, 9), // "setCutBox"
+QT_MOC_LITERAL(7, 64, 9), // "putSphere"
+QT_MOC_LITERAL(8, 74, 9), // "cutSphere"
+QT_MOC_LITERAL(9, 84, 12), // "putEllipsoid"
+QT_MOC_LITERAL(10, 97, 12), // "cutEllipsoid"
+QT_MOC_LITERAL(11, 110, 5), // "mudaX"
+QT_MOC_LITERAL(12, 116, 2), // "x_"
+QT_MOC_LITERAL(13, 119, 5), // "mudaY"
+QT_MOC_LITERAL(14, 125, 2), // "y_"
+QT_MOC_LITERAL(15, 128, 5), // "mudaZ"
+QT_MOC_LITERAL(16, 134, 2), // "z_"
+QT_MOC_LITERAL(17, 137, 8), // "mudaRaio"
+QT_MOC_LITERAL(18, 146, 5), // "raio_"
+QT_MOC_LITERAL(19, 152, 6), // "mudaRx"
+QT_MOC_LITERAL(20, 159, 3), // "rx_"
+QT_MOC_LITERAL(21, 163, 6), // "mudaRy"
+QT_MOC_LITERAL(22, 170, 3), // "ry_"
+QT_MOC_LITERAL(23, 174, 6), // "mudaRz"
+QT_MOC_LITERAL(24, 181, 3) // "rz_"
 
     },
     "Interface\0value_xy\0\0setPutVoxel\0"
-    "setCutVoxel"
+    "setCutVoxel\0setPutBox\0setCutBox\0"
+    "putSphere\0cutSphere\0putEllipsoid\0"
+    "cutEllipsoid\0mudaX\0x_\0mudaY\0y_\0mudaZ\0"
+    "z_\0mudaRaio\0raio_\0mudaRx\0rx_\0mudaRy\0"
+    "ry_\0mudaRz\0rz_"
 };
 #undef QT_MOC_LITERAL
 
@@ -50,7 +74,7 @@ static const uint qt_meta_data_Interface[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+      16,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -58,11 +82,24 @@ static const uint qt_meta_data_Interface[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    2,   29,    2, 0x06 /* Public */,
+       1,    2,   94,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   34,    2, 0x0a /* Public */,
-       4,    0,   35,    2, 0x0a /* Public */,
+       3,    0,   99,    2, 0x0a /* Public */,
+       4,    0,  100,    2, 0x0a /* Public */,
+       5,    0,  101,    2, 0x0a /* Public */,
+       6,    0,  102,    2, 0x0a /* Public */,
+       7,    0,  103,    2, 0x0a /* Public */,
+       8,    0,  104,    2, 0x0a /* Public */,
+       9,    0,  105,    2, 0x0a /* Public */,
+      10,    0,  106,    2, 0x0a /* Public */,
+      11,    1,  107,    2, 0x0a /* Public */,
+      13,    1,  110,    2, 0x0a /* Public */,
+      15,    1,  113,    2, 0x0a /* Public */,
+      17,    1,  116,    2, 0x0a /* Public */,
+      19,    1,  119,    2, 0x0a /* Public */,
+      21,    1,  122,    2, 0x0a /* Public */,
+      23,    1,  125,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    2,    2,
@@ -70,6 +107,19 @@ static const uint qt_meta_data_Interface[] = {
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   12,
+    QMetaType::Void, QMetaType::Int,   14,
+    QMetaType::Void, QMetaType::Int,   16,
+    QMetaType::Void, QMetaType::Int,   18,
+    QMetaType::Void, QMetaType::Int,   20,
+    QMetaType::Void, QMetaType::Int,   22,
+    QMetaType::Void, QMetaType::Int,   24,
 
        0        // eod
 };
@@ -83,6 +133,19 @@ void Interface::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 0: _t->value_xy((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 1: _t->setPutVoxel(); break;
         case 2: _t->setCutVoxel(); break;
+        case 3: _t->setPutBox(); break;
+        case 4: _t->setCutBox(); break;
+        case 5: _t->putSphere(); break;
+        case 6: _t->cutSphere(); break;
+        case 7: _t->putEllipsoid(); break;
+        case 8: _t->cutEllipsoid(); break;
+        case 9: _t->mudaX((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 10: _t->mudaY((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 11: _t->mudaZ((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 12: _t->mudaRaio((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 13: _t->mudaRx((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 14: _t->mudaRy((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 15: _t->mudaRz((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -126,13 +189,13 @@ int Interface::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 16)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 16;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 16)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 3;
+        _id -= 16;
     }
     return _id;
 }

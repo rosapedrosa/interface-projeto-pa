@@ -40,16 +40,37 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->horizontalSlider_x,
             SIGNAL(valueChanged(int)),
             ui->widget,
-            SLOT(Dimx));
+            SLOT(mudaX(int)));
 
+    connect(ui->horizontalSlider_y,
+            SIGNAL(valueChanged(int)),
+            ui->widget,
+            SLOT(mudaY(int)));
+
+    connect(ui->horizontalSlider_z,
+            SIGNAL(valueChanged(int)),
+            ui->widget,
+            SLOT(mudaZ(int)));
 
     connect(ui->actionputvoxel,
             SIGNAL(triggered()),
             ui->widget,
             SLOT(setPutVoxel()));
 
-     connect(ui->actionputvoxel, SIGNAL(triggered(bool)), ui->widget, SLOT(setPutMetodoVoxel()));
+    connect(ui->actioncutvoxel,
+            SIGNAL(triggered()),
+            ui->widget,
+            SLOT(setCutVoxel()));
 
+    connect(ui->actionputshera,
+            SIGNAL(triggered()),
+            ui->widget,
+            SLOT(setPutShere()));
+
+    connect(ui->actioncutsphera,
+            SIGNAL(triggered()),
+            ui->widget,
+            SLOT(setCutSphere()));
 
 }
 
