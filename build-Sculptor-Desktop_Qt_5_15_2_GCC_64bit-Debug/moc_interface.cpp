@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Interface_t {
     QByteArrayData data[25];
-    char stringdata0[185];
+    char stringdata0[197];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,32 +39,32 @@ QT_MOC_LITERAL(3, 20, 11), // "setPutVoxel"
 QT_MOC_LITERAL(4, 32, 11), // "setCutVoxel"
 QT_MOC_LITERAL(5, 44, 9), // "setPutBox"
 QT_MOC_LITERAL(6, 54, 9), // "setCutBox"
-QT_MOC_LITERAL(7, 64, 9), // "putSphere"
-QT_MOC_LITERAL(8, 74, 9), // "cutSphere"
-QT_MOC_LITERAL(9, 84, 12), // "putEllipsoid"
-QT_MOC_LITERAL(10, 97, 12), // "cutEllipsoid"
-QT_MOC_LITERAL(11, 110, 5), // "mudaX"
-QT_MOC_LITERAL(12, 116, 2), // "x_"
-QT_MOC_LITERAL(13, 119, 5), // "mudaY"
-QT_MOC_LITERAL(14, 125, 2), // "y_"
-QT_MOC_LITERAL(15, 128, 5), // "mudaZ"
-QT_MOC_LITERAL(16, 134, 2), // "z_"
-QT_MOC_LITERAL(17, 137, 8), // "mudaRaio"
-QT_MOC_LITERAL(18, 146, 5), // "raio_"
-QT_MOC_LITERAL(19, 152, 6), // "mudaRx"
-QT_MOC_LITERAL(20, 159, 3), // "rx_"
-QT_MOC_LITERAL(21, 163, 6), // "mudaRy"
-QT_MOC_LITERAL(22, 170, 3), // "ry_"
-QT_MOC_LITERAL(23, 174, 6), // "mudaRz"
-QT_MOC_LITERAL(24, 181, 3) // "rz_"
+QT_MOC_LITERAL(7, 64, 12), // "setPutSphere"
+QT_MOC_LITERAL(8, 77, 12), // "setCutSphere"
+QT_MOC_LITERAL(9, 90, 15), // "setPutEllipsoid"
+QT_MOC_LITERAL(10, 106, 15), // "setCutEllipsoid"
+QT_MOC_LITERAL(11, 122, 5), // "mudaX"
+QT_MOC_LITERAL(12, 128, 2), // "x_"
+QT_MOC_LITERAL(13, 131, 5), // "mudaY"
+QT_MOC_LITERAL(14, 137, 2), // "y_"
+QT_MOC_LITERAL(15, 140, 5), // "mudaZ"
+QT_MOC_LITERAL(16, 146, 2), // "z_"
+QT_MOC_LITERAL(17, 149, 8), // "mudaRaio"
+QT_MOC_LITERAL(18, 158, 5), // "raio_"
+QT_MOC_LITERAL(19, 164, 6), // "mudaRx"
+QT_MOC_LITERAL(20, 171, 3), // "rx_"
+QT_MOC_LITERAL(21, 175, 6), // "mudaRy"
+QT_MOC_LITERAL(22, 182, 3), // "ry_"
+QT_MOC_LITERAL(23, 186, 6), // "mudaRz"
+QT_MOC_LITERAL(24, 193, 3) // "rz_"
 
     },
     "Interface\0value_xy\0\0setPutVoxel\0"
     "setCutVoxel\0setPutBox\0setCutBox\0"
-    "putSphere\0cutSphere\0putEllipsoid\0"
-    "cutEllipsoid\0mudaX\0x_\0mudaY\0y_\0mudaZ\0"
-    "z_\0mudaRaio\0raio_\0mudaRx\0rx_\0mudaRy\0"
-    "ry_\0mudaRz\0rz_"
+    "setPutSphere\0setCutSphere\0setPutEllipsoid\0"
+    "setCutEllipsoid\0mudaX\0x_\0mudaY\0y_\0"
+    "mudaZ\0z_\0mudaRaio\0raio_\0mudaRx\0rx_\0"
+    "mudaRy\0ry_\0mudaRz\0rz_"
 };
 #undef QT_MOC_LITERAL
 
@@ -135,10 +135,10 @@ void Interface::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 2: _t->setCutVoxel(); break;
         case 3: _t->setPutBox(); break;
         case 4: _t->setCutBox(); break;
-        case 5: _t->putSphere(); break;
-        case 6: _t->cutSphere(); break;
-        case 7: _t->putEllipsoid(); break;
-        case 8: _t->cutEllipsoid(); break;
+        case 5: _t->setPutSphere(); break;
+        case 6: _t->setCutSphere(); break;
+        case 7: _t->setPutEllipsoid(); break;
+        case 8: _t->setCutEllipsoid(); break;
         case 9: _t->mudaX((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 10: _t->mudaY((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 11: _t->mudaZ((*reinterpret_cast< int(*)>(_a[1]))); break;

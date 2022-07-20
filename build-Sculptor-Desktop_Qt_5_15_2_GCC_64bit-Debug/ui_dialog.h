@@ -14,32 +14,54 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Dialog
 {
 public:
-    QDialogButtonBox *buttonBox;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
     QLabel *label;
-    QLabel *label_2;
+    QLabel *label_3;
+    QSpacerItem *verticalSpacer;
+    QDialogButtonBox *buttonBox;
 
     void setupUi(QDialog *Dialog)
     {
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName(QString::fromUtf8("Dialog"));
-        Dialog->resize(184, 168);
-        buttonBox = new QDialogButtonBox(Dialog);
+        Dialog->resize(257, 162);
+        widget = new QWidget(Dialog);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(20, 30, 211, 97));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(widget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        verticalLayout->addWidget(label);
+
+        label_3 = new QLabel(widget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        verticalLayout->addWidget(label_3);
+
+        verticalSpacer = new QSpacerItem(20, 18, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
+
+        buttonBox = new QDialogButtonBox(widget);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setGeometry(QRect(10, 130, 151, 25));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-        label = new QLabel(Dialog);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(30, 40, 111, 31));
-        label_2 = new QLabel(Dialog);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(30, 70, 101, 31));
+
+        verticalLayout->addWidget(buttonBox);
+
 
         retranslateUi(Dialog);
         QObject::connect(buttonBox, SIGNAL(accepted()), Dialog, SLOT(accept()));
@@ -51,8 +73,8 @@ public:
     void retranslateUi(QDialog *Dialog)
     {
         Dialog->setWindowTitle(QCoreApplication::translate("Dialog", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("Dialog", "Deseja criar um", nullptr));
-        label_2->setText(QCoreApplication::translate("Dialog", "novo desenho?", nullptr));
+        label->setText(QCoreApplication::translate("Dialog", "Deseja criar um novo desenho?", nullptr));
+        label_3->setText(QCoreApplication::translate("Dialog", "Seu arquivo n\303\243o ser\303\241 salvo!", nullptr));
     } // retranslateUi
 
 };

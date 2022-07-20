@@ -23,6 +23,7 @@ public:
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     void mouseReleaseEvent(QMouseEvent *event);
+    void salvaArquivo(QString s);
 
     QString escolha;
     int nl,nc,np, dx, dy, dz;
@@ -38,10 +39,10 @@ public slots:
      void setCutVoxel();
      void setPutBox();
      void setCutBox();
-     void putSphere();
-     void cutSphere();
-     void putEllipsoid();
-     void cutEllipsoid();
+     void setPutSphere();
+     void setCutSphere();
+     void setPutEllipsoid();
+     void setCutEllipsoid();
      void mudaX(int x_);
      void mudaY(int y_);
      void mudaZ(int z_);

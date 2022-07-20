@@ -36,7 +36,6 @@ MainWindow::MainWindow(QWidget *parent)
             this,
             SLOT(novoDesenho()));
 
-
     connect(ui->horizontalSlider_x,
             SIGNAL(valueChanged(int)),
             ui->widget,
@@ -62,15 +61,35 @@ MainWindow::MainWindow(QWidget *parent)
             ui->widget,
             SLOT(setCutVoxel()));
 
+    connect(ui->actionputbox,
+            SIGNAL(triggered()),
+            ui->widget,
+            SLOT(setPutBox()));
+
+    connect(ui->actioncutbox,
+            SIGNAL(triggered()),
+            ui->widget,
+            SLOT(setCutBox()));
+
     connect(ui->actionputshera,
             SIGNAL(triggered()),
             ui->widget,
-            SLOT(setPutShere()));
+            SLOT(setPutSphere()));
 
     connect(ui->actioncutsphera,
             SIGNAL(triggered()),
             ui->widget,
             SLOT(setCutSphere()));
+
+    connect(ui->actionputellipsoid,
+            SIGNAL(triggered()),
+            ui->widget,
+            SLOT(setPutEllipsoid()));
+
+    connect(ui->actioncutellipsoid,
+            SIGNAL(triggered()),
+            ui->widget,
+            SLOT(setCutEllipsoid()));
 
 }
 
@@ -105,7 +124,7 @@ void MainWindow::salvaArquivo()
     }
     if(selectedFilter == "Arquivo OFF(*.off)"){
         // grava o arquivo
-      // sculptor.writeOFF("aa.off");
+      ui->widget->salvaArquivo(filename);
 
 }
 }
@@ -113,7 +132,6 @@ void MainWindow::novoDesenho()
 {   Dialog d;
     d.exec();
 }
-
 
 
 

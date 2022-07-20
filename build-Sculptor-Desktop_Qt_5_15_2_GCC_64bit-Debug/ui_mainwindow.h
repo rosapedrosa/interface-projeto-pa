@@ -45,8 +45,14 @@ public:
     QAction *actionputellipsoid;
     QAction *actioncutellipsoid;
     QWidget *centralwidget;
+    QHBoxLayout *horizontalLayout_4;
+    QVBoxLayout *verticalLayout_4;
     Interface *widget;
-    QWidget *layoutWidget;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer;
+    QHBoxLayout *horizontalLayout;
+    QLCDNumber *lcdNumber_valueX;
+    QLCDNumber *lcdNumber_valueY;
     QFormLayout *formLayout;
     QGroupBox *groupBox_Esfera;
     QVBoxLayout *verticalLayout_2;
@@ -83,15 +89,11 @@ public:
     QLabel *labelRy_2;
     QSpacerItem *verticalSpacer_Ryz;
     QSplitter *splitter_7;
-    QWidget *layoutWidget1;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_Rz;
     QSlider *horizontalSlider_Rz;
     QLabel *labelRz_2;
-    QWidget *layoutWidget2;
-    QHBoxLayout *horizontalLayout;
-    QLCDNumber *lcdNumber_valueX;
-    QLCDNumber *lcdNumber_valueY;
     QMenuBar *menubar;
     QMenu *menuArquivo;
     QToolBar *toolBar;
@@ -100,7 +102,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(834, 600);
+        MainWindow->resize(605, 446);
         actionNew = new QAction(MainWindow);
         actionNew->setObjectName(QString::fromUtf8("actionNew"));
         actionExit = new QAction(MainWindow);
@@ -149,16 +151,57 @@ public:
         actioncutellipsoid->setIcon(icon7);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        horizontalLayout_4 = new QHBoxLayout(centralwidget);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         widget = new Interface(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(40, 10, 481, 331));
-        layoutWidget = new QWidget(centralwidget);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(606, 10, 155, 425));
-        formLayout = new QFormLayout(layoutWidget);
+
+        verticalLayout_4->addWidget(widget);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        lcdNumber_valueX = new QLCDNumber(centralwidget);
+        lcdNumber_valueX->setObjectName(QString::fromUtf8("lcdNumber_valueX"));
+        lcdNumber_valueX->setFocusPolicy(Qt::NoFocus);
+        lcdNumber_valueX->setContextMenuPolicy(Qt::CustomContextMenu);
+        lcdNumber_valueX->setSmallDecimalPoint(false);
+        lcdNumber_valueX->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout->addWidget(lcdNumber_valueX);
+
+        lcdNumber_valueY = new QLCDNumber(centralwidget);
+        lcdNumber_valueY->setObjectName(QString::fromUtf8("lcdNumber_valueY"));
+        lcdNumber_valueY->setFocusPolicy(Qt::NoFocus);
+        lcdNumber_valueY->setContextMenuPolicy(Qt::NoContextMenu);
+        lcdNumber_valueY->setFrameShape(QFrame::Box);
+        lcdNumber_valueY->setFrameShadow(QFrame::Raised);
+        lcdNumber_valueY->setLineWidth(1);
+        lcdNumber_valueY->setSmallDecimalPoint(false);
+        lcdNumber_valueY->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout->addWidget(lcdNumber_valueY);
+
+
+        horizontalLayout_3->addLayout(horizontalLayout);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_3);
+
+        verticalLayout_4->setStretch(0, 100);
+
+        horizontalLayout_4->addLayout(verticalLayout_4);
+
+        formLayout = new QFormLayout();
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
-        formLayout->setContentsMargins(0, 0, 0, 0);
-        groupBox_Esfera = new QGroupBox(layoutWidget);
+        groupBox_Esfera = new QGroupBox(centralwidget);
         groupBox_Esfera->setObjectName(QString::fromUtf8("groupBox_Esfera"));
         verticalLayout_2 = new QVBoxLayout(groupBox_Esfera);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
@@ -181,7 +224,7 @@ public:
 
         formLayout->setWidget(0, QFormLayout::LabelRole, groupBox_Esfera);
 
-        groupBox_Posicao = new QGroupBox(layoutWidget);
+        groupBox_Posicao = new QGroupBox(centralwidget);
         groupBox_Posicao->setObjectName(QString::fromUtf8("groupBox_Posicao"));
         verticalLayout = new QVBoxLayout(groupBox_Posicao);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
@@ -244,7 +287,7 @@ public:
 
         formLayout->setWidget(1, QFormLayout::LabelRole, groupBox_Posicao);
 
-        groupBox_Posicao_2 = new QGroupBox(layoutWidget);
+        groupBox_Posicao_2 = new QGroupBox(centralwidget);
         groupBox_Posicao_2->setObjectName(QString::fromUtf8("groupBox_Posicao_2"));
         verticalLayout_3 = new QVBoxLayout(groupBox_Posicao_2);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
@@ -291,65 +334,42 @@ public:
         splitter_7 = new QSplitter(groupBox_Posicao_2);
         splitter_7->setObjectName(QString::fromUtf8("splitter_7"));
         splitter_7->setOrientation(Qt::Horizontal);
-        layoutWidget1 = new QWidget(splitter_7);
-        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
+        layoutWidget = new QWidget(splitter_7);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_Rz = new QLabel(layoutWidget1);
+        label_Rz = new QLabel(layoutWidget);
         label_Rz->setObjectName(QString::fromUtf8("label_Rz"));
 
         horizontalLayout_2->addWidget(label_Rz);
 
-        horizontalSlider_Rz = new QSlider(layoutWidget1);
+        horizontalSlider_Rz = new QSlider(layoutWidget);
         horizontalSlider_Rz->setObjectName(QString::fromUtf8("horizontalSlider_Rz"));
         horizontalSlider_Rz->setOrientation(Qt::Horizontal);
 
         horizontalLayout_2->addWidget(horizontalSlider_Rz);
 
-        labelRz_2 = new QLabel(layoutWidget1);
+        labelRz_2 = new QLabel(layoutWidget);
         labelRz_2->setObjectName(QString::fromUtf8("labelRz_2"));
 
         horizontalLayout_2->addWidget(labelRz_2);
 
-        splitter_7->addWidget(layoutWidget1);
+        splitter_7->addWidget(layoutWidget);
 
         verticalLayout_3->addWidget(splitter_7);
 
 
         formLayout->setWidget(2, QFormLayout::LabelRole, groupBox_Posicao_2);
 
-        layoutWidget2 = new QWidget(centralwidget);
-        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(390, 350, 136, 25));
-        horizontalLayout = new QHBoxLayout(layoutWidget2);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        lcdNumber_valueX = new QLCDNumber(layoutWidget2);
-        lcdNumber_valueX->setObjectName(QString::fromUtf8("lcdNumber_valueX"));
-        lcdNumber_valueX->setFocusPolicy(Qt::NoFocus);
-        lcdNumber_valueX->setContextMenuPolicy(Qt::CustomContextMenu);
-        lcdNumber_valueX->setSmallDecimalPoint(false);
-        lcdNumber_valueX->setSegmentStyle(QLCDNumber::Flat);
 
-        horizontalLayout->addWidget(lcdNumber_valueX);
+        horizontalLayout_4->addLayout(formLayout);
 
-        lcdNumber_valueY = new QLCDNumber(layoutWidget2);
-        lcdNumber_valueY->setObjectName(QString::fromUtf8("lcdNumber_valueY"));
-        lcdNumber_valueY->setFocusPolicy(Qt::NoFocus);
-        lcdNumber_valueY->setContextMenuPolicy(Qt::NoContextMenu);
-        lcdNumber_valueY->setFrameShape(QFrame::Box);
-        lcdNumber_valueY->setFrameShadow(QFrame::Raised);
-        lcdNumber_valueY->setLineWidth(1);
-        lcdNumber_valueY->setSmallDecimalPoint(false);
-        lcdNumber_valueY->setSegmentStyle(QLCDNumber::Flat);
-
-        horizontalLayout->addWidget(lcdNumber_valueY);
-
+        horizontalLayout_4->setStretch(0, 100);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 834, 22));
+        menubar->setGeometry(QRect(0, 0, 605, 22));
         menuArquivo = new QMenu(menubar);
         menuArquivo->setObjectName(QString::fromUtf8("menuArquivo"));
         MainWindow->setMenuBar(menubar);
@@ -435,7 +455,7 @@ public:
         groupBox_Esfera->setTitle(QCoreApplication::translate("MainWindow", "Esfera", nullptr));
         labelRaio->setText(QCoreApplication::translate("MainWindow", "Raio", nullptr));
         labelRaio_1->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
-        groupBox_Posicao->setTitle(QCoreApplication::translate("MainWindow", "Posi\303\247\303\265es", nullptr));
+        groupBox_Posicao->setTitle(QCoreApplication::translate("MainWindow", "Dimens\303\265es", nullptr));
         label_x->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
         labelX_1->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
         label_y->setText(QCoreApplication::translate("MainWindow", "y", nullptr));

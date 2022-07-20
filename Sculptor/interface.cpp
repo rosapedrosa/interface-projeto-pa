@@ -46,9 +46,7 @@ void Interface::paintEvent(QPaintEvent *event)
     p.drawRect(1,1,width()-2, height()-2);
 
 
-   // for(int k=0; k<np; k++){
-        //for(int i = 0; i <nc; i++){
-           // for(int j = 0; j <nl; j++){
+
 
                 if(escolha == "putVoxel"){
 
@@ -56,10 +54,8 @@ void Interface::paintEvent(QPaintEvent *event)
                     brush.setStyle(Qt::SolidPattern);
                     p.setBrush(brush);
                     pen.setColor(QColor(244,0,0));
-                    p.drawRect(DimX,DimY,mouseX, mouseY); // posicao x, y da tela e tamanha
+                    p.drawRect(mouseX, mouseY,DimX,DimY); // posicao x, y da tela e tamanha
                     sculptor->putVoxel(10,10,10); // posiçao da pintura
-
-
 
                 }
                 if(escolha == "cutVoxel"){
@@ -69,16 +65,31 @@ void Interface::paintEvent(QPaintEvent *event)
                     pen.setColor(QColor(255,255,255));
                     sculptor->cutVoxel(10,10,10); //posicao da pintura
 }
+                if(escolha == "putBox"){
+
+                    brush.setColor(QColor(244,0,0));  //Editar escolha de cor
+                    brush.setStyle(Qt::SolidPattern);
+                    p.setBrush(brush);
+                    pen.setColor(QColor(244,0,0));
+                    p.drawRect(mouseX, mouseY,DimX,DimY); // posicao x, y da tela e tamanha
+                    sculptor->putBox(DimX, DimY, DimZ, Rx, Ry,Rz); // posiçao da pintura
+
+                }
+                if(escolha == "cutBox"){
+                    brush.setColor(QColor(255,255,255));  //Editar escolha de cor
+                    brush.setStyle(Qt::SolidPattern);
+                    p.setBrush(brush);
+                    pen.setColor(QColor(255,255,255));
+                    sculptor->putBox(DimX, DimY, DimZ, Rx, Ry,Rz); //posicao da pintura
+}
 
                 if(escolha == "putSphere"){
 
                     brush.setColor(QColor(244,0,0));  //Editar escolha de cor
                     brush.setStyle(Qt::SolidPattern);
                     p.setBrush(brush);
-                    pen.setColor(QColor(244,0,0));
-                                       p.drawRect(DimX,DimY,mouseX, mouseY); // posicao x, y da tela e tamanha
-                   // p.drawEllipse(10,10,10,raio);
-                    //p.drawEllipse(10,10,mouseX, mouseY,raio); // posicao x, y da tela e tamanha
+                    pen.setColor(QColor(244,0,0));                           
+                    //.drawEllipse(DimX, DimY, DimZ,raio);// posicao x, y da tela e tamanha
                     sculptor->putSphere(10,10,10,2); // posiçao da pintura
 
 
@@ -93,11 +104,6 @@ void Interface::paintEvent(QPaintEvent *event)
 }
 
 
-
-           // }
-        //}
-
-   // }
 }
 
 void Interface::mousePressEvent(QMouseEvent *event)
@@ -111,8 +117,7 @@ void Interface::mousePressEvent(QMouseEvent *event)
 
     mouseX = event->x();
     mouseY = event->y();
-    //mouseX = (int) (((1.0*(1.0*(event->x()-1.0*(1.0*np*50)/dx)))/(width()-50))*dx);
-    //mouseY = (int) (((1.0*(1.0*(event->y()-1.0*(1.0*np*50)/dy)))/(height()-50))*dy);
+
 
 
 
@@ -131,9 +136,13 @@ void Interface::mouseMoveEvent(QMouseEvent *event)
 
 void Interface::mouseReleaseEvent(QMouseEvent *event)
 {
-   pressed = false;
+    pressed = false;
 }
 
+void Interface::salvaArquivo(QString s)
+{
+sculptor->writeOFF(s.toStdString().c_str());
+}
 
 
 void Interface:: setPutVoxel()
@@ -152,7 +161,7 @@ void Interface::setCutVoxel()
 void Interface::setPutBox()
 {
 
-    escolha = "PutBox";
+    escolha = "putBox";
     repaint();
 }
 
@@ -163,29 +172,28 @@ void Interface::setCutBox()
     repaint();
 }
 
-void Interface::putSphere()
+void Interface::setPutSphere()
 {
 
     escolha = "putSphere";
     repaint();
 }
 
-void Interface::cutSphere()
+void Interface::setCutSphere()
 {
 
     escolha = "cutSphere";
-    qDebug()<< escolha;
     repaint();
 }
 
-void Interface::putEllipsoid()
+void Interface::setPutEllipsoid()
 {
 
     escolha = "putEllipsoid";
     repaint();
 }
 
-void Interface::cutEllipsoid()
+void Interface::setCutEllipsoid()
 {
 
     escolha = "cutEllipsoid";
