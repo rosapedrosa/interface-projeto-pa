@@ -16,5 +16,7 @@ Para desenhar na ferramenta é necessário selecionar um dos métodos de desenho
 
 Para selecionar as dimensões de desenho o usuário deve escolher os valores de X,Y e Z e raio da esfera e os raios da elipsoide nos "horizontal Slide" disponíveis na ferramenta de desenho.
 
+No menu superior a opção "Arquivo" permite selecionar para um novo arquivo de desenho, salvar e sair da ferramenta.
 
-![tela](https://user-images.githubusercontent.com/55494897/179991701-743a051f-da0e-4581-8e60-4676c36cada8.png)
+
+![Tela](https://user-images.githubusercontent.com/55494897/179994574-45b7158d-d6d8-44ed-a184-f53d01b3ca35.png)
