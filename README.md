@@ -5,7 +5,8 @@ O objetivo desse projeto é construir uma ferramenta interativa baseada nas bibl
 # Funcionalidades ⚙️
 Para desenhar na ferramenta é necessário selecionar um dos métodos de desenho (putVoxel, putBox, putShere, putEllipsoid, cutVoxel, cutBox, cutSphere e cutEllipsoid).
 
-- PutVoxel: Desenha um Voxel (Pixel) com dimensões e posição escolhida no desenho. ![putvoxel](https://user-images.githubusercontent.com/55494897/179989870-094b6d0e-06e7-4ae3-b7d1-0b87a56d1658.png)
+- PutVoxel: Desenha um Voxel (Pixel) com dimensões e posição escolhida no desenho.![Captura de tela de 2022-07-20 09-42-54](https://user-images.githubusercontent.com/55494897/179989983-d3e2e3a1-da68-4e8e-a9fa-46c4683b3170.png)
+
 - PutBox:  Desenha um conjunto de Voxel (Pixel) com dimensões, posição e limites espaciais escolhida no desenho.
 - PutSphere: Desenha uma esfera com dimensões, posição e raio escolhidos no desenho.
 - PutEllipsoid: Desenha uma elipse com dimensões,posição e raio escolhidos no desenho.
